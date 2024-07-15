@@ -1,0 +1,59 @@
+<%- include('./components/header') %>
+
+<form action="/blog/" method="post" class="flex w-full flex-col gap-4">
+    <h2 class="text-3xl font-bold mb-4">Create Blog</h2>
+    <label class="card bg-base-300 rounded-2xl p-5 gap-3">
+        <span class="text-xl antialiased font-bold">Title</span>
+        <input
+            type="text"
+            placeholder="Enter Title"
+            class="input input-bordered w-full rounded-2xl"
+            name="title"
+            required
+        />
+    </label>
+    <label class="card bg-base-300 rounded-2xl p-5 gap-3">
+        <span class="text-xl antialiased font-bold">Description</span>
+        <input
+            type="text"
+            placeholder="Enter Description"
+            class="input input-bordered w-full rounded-2xl",
+            name="description"
+        />
+    </label>
+    <label class="card bg-base-300 rounded-2xl p-5 gap-1">
+        <span class="text-xl antialiased font-bold">Markdown</span>
+        <p class="text-slate-800 text-sm pl-3 mb-1">
+            The Blog Should be written in Markdown syntax. If you don't know
+            markdown then checkout this
+            <a
+                class="text-blue-700 border-b border-b-transparent hover:border-b-blue-700 hover:text-blue-900 visited:text-purple-700"
+                href="https://www.markdownguide.org/getting-started/"
+                target="_blank"
+                >link</a
+            >
+        </p>
+        <textarea
+            placeholder="Write your Blog"
+            rows="10"
+            name="body"
+            class="textarea textarea-bordered textarea-lg w-full rounded-2xl text-sm"
+            required
+        ></textarea>
+    </label>
+    <div class="join gap-3">
+        <a
+        class="btn btn-secoondary-content text-left w-fit rounded-2xl hover:bg-white hover:text-black"
+        href="/blog"
+        >Cancel</a
+        >
+        <button
+            class="btn btn-primary text-left w-fit rounded-2xl  "
+            type="submit"
+        >
+            Create Blog
+        </button>
+    </div>
+</form>
+
+<%- include('./components/footer') %>

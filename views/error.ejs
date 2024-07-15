@@ -1,0 +1,29 @@
+<%- include('./components/header') %> 
+<div class="alert alert-error shadow-lg rounded-2xl flex flex-col justify-start text-left">
+    <div>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="stroke-current flex-shrink-0 h-6 w-6 mx-auto"
+            fill="none"
+            viewBox="0 0 24 24"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M18.364 5.636l-1.414-1.414a9 9 0 00-12.728 0l-1.414 1.414a9 9 0 000 12.728l1.414 1.414a9 9 0 0012.728 0l1.414-1.414a9 9 0 000-12.728zM12 8v4m0 4h.01"
+            />
+        </svg>
+        <p class="mt-5"><%= message %></p>
+    </div>
+
+    <div><p>
+        <% if(error){ %>
+           <p>
+                Error: <%= error.message %>
+           </p>  
+        <% } %>
+    </p></div>
+</div>
+
+<%- include( './components/footer') %>
